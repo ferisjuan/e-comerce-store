@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // react
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 // components
 import Cart from './components/Cart';
@@ -16,10 +17,12 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <ProductList />
-      <Details />
-      <Cart />
-      <Default />
+      <Switch>
+        <Route exact path="/" component={ProductList} />
+        <Route path="/details" component={Details} />
+        <Route path="/cart" component={Cart} />
+        <Route component={Default} />
+      </Switch>
     </React.Fragment>
   );
 }
