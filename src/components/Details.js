@@ -45,7 +45,7 @@ export default class Details extends Component {
                       <ButtonContainer>Vuelve a productos</ButtonContainer>
                     </Link>
                     <ButtonContainer
-                      cart
+                      cart // added property to use conditional in styled-components
                       disabled={inCart && true}
                       onClick={() => {
                         value.addToCart(id);
