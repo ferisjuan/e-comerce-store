@@ -10,6 +10,7 @@ import { Switch, Route } from 'react-router-dom';
 import Cart from './components/Cart';
 import Default from './components/Default';
 import Details from './components/Details';
+import Modal from './components/Modal';
 import Navbar from './components/Navbar';
 import ProductList from './components/ProductList';
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/cart" component={Cart} />
         <Route component={Default} />
       </Switch>
+      <Modal />
     </React.Fragment>
   );
 }
